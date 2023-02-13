@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@verifone/ui-design-system/docs/css/custom-bulma.css';
+@import '../node_modules/@verifone/ui-design-system/src/variables/all';
+
+ngb-datepicker {
+    $faded-background-color: $vf-primary-20;
+    $day-border-radius: 2px;
+    $custom-day-width: 2.5rem;
+    border: 0 !important;
+
+    &.dropdown-menu {
+        background-color: $vf-white-100;
+        box-shadow: 0 4px 14px 0 rgba($vf-black-100, 0.1);
+        z-index: 5;
+        &.show {
+          display: block;
+        }
+      }
+
+    .disabled {
+      cursor: not-allowed !important;
+  
+      .custom-day {
+        color: $vf-info-20;
+      }
+    }
+  
+    .ngb-dp-header,
+    .ngb-dp-month-name {
+        font-weight: 700;
+        font-size: $vf-font-size-6;
+    }
+    
+  
+    // Space between calendars
+    .ngb-dp-month + .ngb-dp-month .ngb-dp-month-name,
+    .ngb-dp-month + .ngb-dp-month .ngb-dp-week {
+      padding-left: $vf-spacing-6;
+    }
+  
+    .ngb-dp-day,
+    .ngb-dp-week-number,
+    .ngb-dp-weekday {
+      width: $custom-day-width;
+      height: $custom-day-width;
+    }
+  
+    .ngb-dp-arrow-btn {
+      transform: scale(1.2);
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $vf-black-5;
+      }
+  
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  
+    .ngb-dp-weekdays {
+      // color: $vf-black-60;
+      color: $vf-black-60;
+      border-bottom: 0;
+  
+      .ngb-dp-weekday {
+        font-style: normal;
+      }
+    }
+  
+    .custom-day {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.185rem 0.25rem;
+      color: $vf-black-100;
+      height: $custom-day-width;
+      width: $custom-day-width;
+  
+      &.focused {
+        background-color: $vf-black-20;
+      }
+  
+      &.range,
+      &:hover {
+        border-radius: $day-border-radius;
+        background-color: $vf-primary-100;
+        color: $vf-white-100;
+  
+        &.first:not(.last) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+  
+        &.last:not(.first) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+  
+      &.faded {
+        border-radius: 0;
+        background-color: $faded-background-color;
+        position: relative;
+        color: $vf-black-100;
+      }
+    }
+  }
