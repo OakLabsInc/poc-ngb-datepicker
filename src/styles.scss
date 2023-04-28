@@ -162,7 +162,6 @@ ngb-timepicker {
     &-input {
       text-align: center;
       background-color: transparent;
-
       border-style: solid;
       border-radius: 16px;
       color: $vf-black-100;
@@ -170,7 +169,6 @@ ngb-timepicker {
       width: 100%;
       outline: none;
       align-items: center;
-      border-radius: 16px;
       box-shadow: none;
       display: inline-flex;
       font-size: 0.9375rem;
@@ -185,7 +183,6 @@ ngb-timepicker {
       vertical-align: top;
       border-color: $vf-black-80;
       border-width: 1px;
-
     }
 
     &-hour,
@@ -214,95 +211,23 @@ ngb-timepicker {
       .ngb-tp-input {
         border-color: $vf-warning-100 !important;
       }
-
     }
 
     .ngb-tp {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-
-      .visually-hidden {
-        display: none;
-      }
-
       &-input-container {
-        width: 3em;
         background-color: transparent;
-
-        .btn {
-          background: none;
-          border: none;
-          margin: 4px;
-        }
       }
 
       &-chevron {
         &::before {
-          border-style: solid;
-          border-width: 2px 2px 0 0;
-          content: '';
-          display: inline-block;
-          height: 0.69em;
-          left: 0.05em;
-          position: relative;
-          top: 0.15em;
-          transform: rotate(-45deg);
-          vertical-align: middle;
-          width: 0.69em;
           border-color: $vf-accent-100;
-        }
-
-        &.bottom:before {
-          top: -0.3em;
-          transform: rotate(135deg);
         }
       }
 
       &-input {
-        text-align: center;
-        background-color: transparent;
-
-        border-style: solid;
-        border-radius: 16px;
         color: $vf-white-100;
-        max-width: 100%;
-        width: 100%;
-        outline: none;
-        align-items: center;
-        border-radius: 16px;
-        box-shadow: none;
-        display: inline-flex;
-        font-size: 0.9375rem;
-        height: 40px;
-        justify-content: flex-start;
-        line-height: 1.6;
-        padding-bottom: calc(0.5rem - 2px);
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        padding-top: calc(0.5rem - 2px);
-        position: relative;
-        vertical-align: top;
         border-color: $vf-black-40;
-        border-width: 1px;
-
-      }
-
-      &-hour,
-      &-minute,
-      &-second,
-      &-meridian {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-      }
-
-      &-spacer {
-        width: 1em;
-        text-align: center;
       }
     }
   }
 }
-
