@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,7 +20,7 @@
     "@angular/router": "^15.1.0",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "@popperjs/core": "^2.11.6",
-    "@verifone/ui-design-system": "git+ssh://git@bitbucket.verifone.com:7999/cpui/ui-design-system.git#v0.16.1",
+    "@verifone/ui-design-system": "git+ssh://git@bitbucket.verifone.com:7999/cpui/ui-design-system.git#v0.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

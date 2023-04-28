@@ -1,52 +1,52 @@
 
-<div class="container">
-  
-</div>
+
 <section class="hero">
   <div class="hero-body ">
     <p class="title has-text-centered">
-     Bulma / ngb-datepicker
+     Bulma / ngb-datepicker / ngb-timepicker
     </p>
     <div class="subtitle has-text-centered">
       <ul>
         <li>@ng-bootstrap/ng-bootstrap v14.0.1</li>
-        <li>@verifone/ui-design-system v0.16.1</li>
+        <li>@verifone/ui-design-system v0.18.1</li>
       </ul>
     </div>
   </div>
 </section>
-<div class="container is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
-  <div class="box is-flex is-flex-direction-column is-justify-content-center is-align-content-center	">
-    
-    <div class="dropdown" [ngClass]="isActive ? 'is-active' : ''">
-      <div class="dropdown-trigger">
-        <button class="button" (click)="toggleMenu()" aria-haspopup="true" aria-controls="dropdown-menu">
-          <span>{{ fromDate.month + '/' + fromDate.day + '/'+ fromDate.year }} — {{ getToDate(toDate) }}</span>
-          <span class="icon">
-            <i class="fas fa-chevron-down"></i>
-          </span>
-        </button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <ngb-datepicker  class="dropdown-item" #dp (dateSelect)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden">
-          </ngb-datepicker>
-          <ng-template #t let-date let-focused="focused">
-            <span
-              class="custom-day"
-              [class.focused]="focused"
-              [class.range]="isRange(date)"
-              [class.faded]="isHovered(date) || isInside(date)"
-              (mouseenter)="hoveredDate = date"
-              (mouseleave)="hoveredDate = null"
-            >
-              {{ date.day }}
-            </span>
-          </ng-template>
-        </div>
-      </div>
-    </div>
-
-    
+<div class="container is-flex is-flex-direction-column is-justify-content-center is-align-content-center pb-8">
+  <h2 class="title">Date Picker</h2>
+  <div class="pb-4 is-flex is-flex-direction-column is-justify-content-center is-align-content-center	">
+    <app-datepicker-basic></app-datepicker-basic>
   </div>
+  <h2 class="title">Time Picker</h2>
+  <div class="">
+    <div class="pb-4 is-flex is-align-items-center is-justify-content-space-around">
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+    </div>
+  </div>
+  <h2 class="title">Time Picker for Overlay</h2>
+  <div class="box has-overlay">
+    <div class="overlay-content p-4 pb-8">
+      test
+    </div>
+    <div class="is-overlay is-flex is-align-items-center is-justify-content-space-around">
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+        <app-timepicker-basic class="mr-2"></app-timepicker-basic>
+    </div>
+  </div>
+
 </div>
+
+
+
+
+
+
+
+
+
